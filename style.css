@@ -1,0 +1,143 @@
+/* Réinitialisation des marges et des espacements par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none; /* Supprime le soulignement des liens */
+    border: none; /* Supprime les bordures par défaut */
+    outline: none; /* Supprime le contour des éléments */
+    scroll-behavior: smooth; /* Ajoute un défilement fluide pour les liens d'ancrage */
+    font-family: "Poppins", sans-serif; /* Définit la police */
+}
+
+/* Variables CSS */
+:root {
+    --bg-color: #b9b2b2; /* Couleur de fond principale */
+    --second-bg-color: #fefefe; /* Couleur de fond secondaire (ajoutez une valeur ici) */
+    --text-color: #0d0d35; /* Couleur du texte (ajoutez une valeur ici) */
+}
+/* Définition de la taille de police par défaut */
+html {
+    font-size: 40%; /* Définit la taille de police à 60% de la taille par défaut du navigateur */
+}
+
+/* Empêche le débordement horizontal de la page */
+body {
+    overflow-x: hidden; /* Cache tout débordement horizontal */
+    background: var(--second-bg-color); /* Applique la couleur de fond définie dans les variables CSS */
+    color: var(--text-color); /* Applique la couleur du texte définie dans les variables CSS */
+}
+
+/* Styles pour l'en-tête */
+header {
+    position: fixed; /* Rend l'en-tête fixe en haut de la page */
+    top: 0; /* Aligne l'en-tête en haut */
+    left: 0; /* Aligne l'en-tête à gauche */
+    width: 100%; /* Prend toute la largeur de la fenêtre */
+    padding: 4rem 12%; /* Ajoute du remplissage vertical de 4rem et horizontal de 12% */
+    background: rgba(0, 0, 0, 0.3); /* Couleur de fond noire avec transparence */
+    backdrop-filter: blur(10px); /* Applique un flou de 10 pixels à l'arrière-plan derrière l'en-tête */
+    display: flex; /* Utilise le modèle de boîte flex pour l'en-tête */
+    justify-content: space-between; /* Espacement égal entre les éléments enfants */
+    align-items: center; /* Centre les éléments enfants verticalement */
+    z-index: 5; /* Définit l'ordre d'empilement pour s'assurer que l'en-tête se superpose aux autres éléments */
+}
+/* Style pour le logo (si utilisé avec une classe spécifique) */
+.logo span {
+    text-shadow: 0 0 25px var(--main-color); /* Ajoute une ombre au texte du logo */
+    --text-color: #0d0d35; /* Couleur du texte (ajoutez une valeur ici) */
+    
+}
+.logo{
+    font-size: 160%; 
+}
+
+/* Styles pour la barre de navigation */
+.navbar a {
+    font-size: 1.8rem; /* Définit la taille de police des liens dans la barre de navigation */
+    color: var(--text-color); /* Applique la couleur du texte définie dans les variables CSS */
+    margin-left: 4rem; /* Ajoute une marge à gauche des liens */
+    font-weight: 500; /* Définit le poids de la police (semi-gras) */
+    transition: 0.3s ease; /* Ajoute une transition douce lors du changement d'état */
+    border-bottom: 3px solid transparent; /* Ajoute une bordure inférieure invisible (pour l'effet de survol) */
+}
+
+/* Styles pour les liens au survol et l'élément actif dans la barre de navigation */
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color); /* Change la couleur du texte pour correspondre à la couleur principale */
+    border-bottom: 3px solid var(--main-color); /* Ajoute une bordure inférieure colorée */
+}
+
+/* Styles pour l'icône du menu */
+#menu-icon {
+    font-size: 3.6rem; /* Définit la taille de police de l'icône du menu */
+    color: var(--main-color); /* Applique la couleur principale à l'icône du menu */
+    display: none; /* Masque l'icône du menu par défaut */
+}
+/* Styles pour la section d'accueil */
+section {
+    min-height: 100vh; /* Hauteur minimale de la section */
+    padding: 10rem 12%; /* Espacement interne */
+}
+
+/* Styles pour le conteneur de la section d'accueil */
+.home {
+    display: flex; /* Utilisation de flexbox */
+    align-items: center; /* Aligne verticalement les éléments au centre */
+    justify-content: center; /* Centre les éléments horizontalement */
+    gap: 15rem; /* Espacement entre les éléments */
+}
+
+/* Styles pour le contenu de la section d'accueil */
+.home-content {
+    display: flex; /* Utilisation de flexbox pour le contenu */
+    flex-direction: column; /* Aligne les éléments en colonne */
+    align-items: baseline; /* Aligne les éléments sur la ligne de base */
+    text-align: left; /* Aligne le texte à gauche */
+    justify-content: center; /* Centre les éléments */
+    margin-top: 3rem; /* Marge supérieure */
+    FRO
+}
+
+/* Styles pour les éléments de texte */
+.home-content h1 {
+    font-size: 10rem; /* Taille de police pour h1 */
+    font-weight: 700; /* Poids de la police */
+    margin-top: 1.5rem; /* Marge supérieure */
+    line-height: 1; /* Interligne */
+    color: #D48837;
+}
+
+.home-content h3 {
+    margin-bottom: 10rem; /* Marge inférieure */
+    margin-top: 1rem; /* Marge supérieure */
+    font-size: 3.5rem; /* Taille de police pour h3 */
+    color: #D48837;
+}
+.lead{
+    font-size: 2rem; /* Taille de police pour h1 */
+    font-weight: 100; /* Poids de la police */
+    margin-top: 1.5rem; /* Marge supérieure */
+    line-height: 1; /* Interligne */
+    color: #060606;
+}
+
+/* Styles pour l'image dans la section d'accueil */
+.home-img {
+    position: relative; /* Positionnement relatif pour l'image */
+    top: 3rem; /* Décalage vers le bas */
+    width: 32vw; /* Largeur de l'image */
+    border-radius: 50%; /* Arrondi de l'image */
+    box-shadow: 0 0 25px var(--main-color); /* Ombre portée */
+    cursor: pointer; /* Curseur en forme de main */
+    transition: 0.4s ease-in-out; /* Transition pour les effets d'état */
+}
+
+/* Effet au survol de l'image */
+.home-img img:hover {
+    box-shadow: 0 0 25px var(--main-color); /* Ombre portée au survol */
+}
+
+
+  
